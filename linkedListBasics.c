@@ -18,15 +18,13 @@ int main(void) {
     NODE *target;
 
     _add(10, NULL);
-    printf("ze head of list: mem address: %d, value: %d\n", head, head->data);
-
     _add(20, NULL);
     _add(30, NULL);
     _add(40, NULL);
 
     target = get_node(40);
+    
     _add(35, target);
-
     _add(5, head);
 
     _printList();
@@ -49,8 +47,8 @@ void _add(int data, NODE *target) {
     new_node->next = target;
 
     printf("new_node memory address: %d, value: %d\n", new_node, new_node->data);
-    //now check if the target address is the head
 
+    //now check if the target address is the head
     if (target == head) {
         head = new_node;
         printf("new head address: %d, value: %d\n", head, head->data);
