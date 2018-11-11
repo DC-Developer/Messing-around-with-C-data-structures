@@ -37,7 +37,7 @@ void _add(int data, NODE *target) {
     NODE *current = head;
     NODE *new_node = (NODE*) malloc(sizeof(NODE));
 
-    if (new_node == NULL) {
+    if (!new_node) {
         puts("Error allocating memory");
         exit(0);
     }
